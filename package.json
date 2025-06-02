@@ -5,12 +5,13 @@
   "main": "stack.ts",
   "version": "0.0.0",
   "scripts": {
-    "check": "biome check --write *.ts"
+    "check": "biome check --write *.ts",
+    "write-vpn-config": "pulumi stack output clientConfig --show-secrets > client-config.ovpn"
   },
   "license": "MIT",
   "dependencies": {
     "@pulumi/pulumi": "^3.173.0",
-    "@stackattack/aws": "0.1.0-dev.6"
+    "@stackattack/aws": "0.1.0-dev.7"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
