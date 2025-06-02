@@ -1,0 +1,21 @@
+{
+  "name": "shared-infra",
+  "private": true,
+  "type": "module",
+  "main": "stack.ts",
+  "version": "0.0.0",
+  "scripts": {
+    "check": "biome check --write *.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@pulumi/pulumi": "^3.173.0",
+    "@stackattack/aws": "0.1.0-dev.6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@swc/core": "^1.11.29",
+    "ts-node": "^10.9.2"
+  },
+  "packageManager": "pnpm@9.5.0"
+}
