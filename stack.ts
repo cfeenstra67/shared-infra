@@ -6,15 +6,22 @@ export default () => {
   const vpc = saws.vpc(ctx);
   const vpn = saws.vpn(ctx, vpc);
 
+  const camFeenstraCertificate = saws.certificate(ctx.prefix('camfeenstra'), {
+    domain: 'camfeenstra.com',
+    noValidate: true,
+    wildcard: true,
+  });
+
   const loadBalancer = saws.loadBalancer(ctx, {
     network: vpc.network("public"),
+    certificate: camFeenstraCertificate,
   });
 
   const cluster = saws.cluster(ctx, {
     network: vpc.network("private"),
     instances: {
       architecture: "arm64",
-      memoryMib: { min: 2048, max: 4096 },
+      memoryMib: { min: 4096, max: 8192 },
       vcpuCount: { min: 2, max: 4 },
       memoryGibPerVcpu: { min: 2, max: 2 }
     },
@@ -30,5 +37,6 @@ export default () => {
     vpc: saws.vpcToIds(vpc),
     database: saws.databaseToIds(database),
     redisUrl: redis.url,
+    camFeenstraCertificate
   };
 };
