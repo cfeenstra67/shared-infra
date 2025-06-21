@@ -11,10 +11,11 @@
   "license": "MIT",
   "dependencies": {
     "@pulumi/pulumi": "^3.173.0",
-    "@stackattack/aws": "0.1.0-dev.21"
+    "@stackattack/aws": "0.1.0-dev.36"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@pulumi/aws": "^6.83.0",
     "@swc/core": "^1.11.29",
     "ts-node": "^10.9.2"
   },

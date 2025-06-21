@@ -1,3 +1,7 @@
 config:
   aws:region: us-east-2
   aws-native:region: us-east-2
+  twingate:apiToken:
+    secure: AAABAGsz1paiEkYBLlafBjfuu0RV7huz0yM5PBee4oVHIPpLxljrPVyG2ls0r4p8O+luP49WTtnMT2iivtK/CWmqu2i2advbq6UKuo0BhAJh3WTGWgjecoECxnal+UdKmUFCx+pw4f29lTR8dLMqKi40VUpdzIRKk4YnRfXEv7o3TvaWWOK3wqSqBwb4V04RbquhH6kvNDwfzNGOINcgKfXdfWu/zg==
+  infra:gmail-verification-code:
+    secure: AAABAJQWprtfo0ElrCvCeZuHnBex/w44JL7wWxS/eSvEyDRStk13hUg0bq12f8i2q4Z9Vm0R+khAiRcGDpl9mtaz1UyGgChovCZzE4HTgiJ7O/j2XVMOd3jOSFgwEWXBNnfCTmmiOyfT6GcobMKm
