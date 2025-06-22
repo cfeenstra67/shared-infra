@@ -12,8 +12,8 @@ importers:
         specifier: ^3.173.0
         version: 3.173.0(ts-node@10.9.2(@swc/core@1.11.29)(@types/node@22.15.29)(typescript@5.8.3))(typescript@5.8.3)
       '@stackattack/aws':
-        specifier: 0.1.0-dev.36
-        version: 0.1.0-dev.36(ts-node@10.9.2(@swc/core@1.11.29)(@types/node@22.15.29)(typescript@5.8.3))(typescript@5.8.3)
+        specifier: 0.1.0-dev.46
+        version: 0.1.0-dev.46(ts-node@10.9.2(@swc/core@1.11.29)(@types/node@22.15.29)(typescript@5.8.3))(typescript@5.8.3)
     devDependencies:
       '@biomejs/biome':
         specifier: ^1.9.4
@@ -340,8 +340,8 @@ packages:
     resolution: {integrity: sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==}
     engines: {node: '>=10'}
 
-  '@stackattack/aws@0.1.0-dev.36':
-    resolution: {integrity: sha512-QTVyku/Xft0xgVcBsz0DYg8lyAMmbwxBTer2xxRAhnDGAfS1rjocnxLxGNsz8RQM4lxt8ogcL5rXJkLz7tYt3Q==}
+  '@stackattack/aws@0.1.0-dev.46':
+    resolution: {integrity: sha512-d6Nau8pViQBb38MZZUAJxTmPNclFJzbsAovnA4za0Ss3PfK+ilBSw4FLA/Qbx0+Z49KFskyGFJNS+A14WLI3Xg==}
 
   '@swc/core-darwin-arm64@1.11.29':
     resolution: {integrity: sha512-whsCX7URzbuS5aET58c75Dloby3Gtj/ITk2vc4WW6pSDQKSPDuONsIcZ7B2ng8oz0K6ttbi4p3H/PNPQLJ4maQ==}
@@ -1735,7 +1735,7 @@ snapshots:
 
   '@sindresorhus/is@4.6.0': {}
 
-  '@stackattack/aws@0.1.0-dev.36(ts-node@10.9.2(@swc/core@1.11.29)(@types/node@22.15.29)(typescript@5.8.3))(typescript@5.8.3)':
+  '@stackattack/aws@0.1.0-dev.46(ts-node@10.9.2(@swc/core@1.11.29)(@types/node@22.15.29)(typescript@5.8.3))(typescript@5.8.3)':
     dependencies:
       '@pulumi/aws': 6.83.0(ts-node@10.9.2(@swc/core@1.11.29)(@types/node@22.15.29)(typescript@5.8.3))(typescript@5.8.3)
       '@pulumi/aws-native': 1.28.0(ts-node@10.9.2(@swc/core@1.11.29)(@types/node@22.15.29)(typescript@5.8.3))(typescript@5.8.3)

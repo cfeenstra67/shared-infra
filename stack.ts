@@ -9,7 +9,6 @@ export default () => {
   const gmailVerificationCode = config.require("gmail-verification-code");
 
   const vpc = saws.vpc(ctx);
-  const vpn = saws.vpn(ctx, vpc);
 
   const camFeenstra = "camfeenstra.com";
 
@@ -57,7 +56,6 @@ export default () => {
   const redis = saws.redis(ctx, { network: vpc.network("private") });
 
   return {
-    clientConfig: vpn.clientConfig,
     cluster: saws.clusterToIds(cluster),
     loadBalancer: saws.loadBalancerToIds(loadBalancer),
     vpc: saws.vpcToIds(vpc),
