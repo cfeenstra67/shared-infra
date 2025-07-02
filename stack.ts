@@ -6,9 +6,14 @@ export default () => {
   const ctx = saws.context();
   const config = new pulumi.Config();
 
-  const gmailVerificationCode = config.require("gmail-verification-code");
+  const gmailVerificationCode = config.require("google-verification-code");
+  const twingateNetwork = config.require("twingate-network");
+  const twingateAccessToken = config.require("twingate-access-token");
+  const twingateRefreshToken = config.require("twingate-refresh-token");
 
-  const vpc = saws.vpc(ctx);
+  const vpc = saws.vpc(ctx, {
+    subnetMask: 24,
+  });
 
   const camFeenstra = "camfeenstra.com";
 
@@ -51,6 +56,15 @@ export default () => {
     },
     maxSize: 5,
   });
+
+  saws.twingateConnector(ctx, {
+    cluster,
+    network: vpc.network("private"),
+    twingateNetwork,
+    twingateAccessToken,
+    twingateRefreshToken,
+  });
+
   const database = saws.database(ctx, { network: vpc.network("private") });
 
   const redis = saws.redis(ctx, { network: vpc.network("private") });
